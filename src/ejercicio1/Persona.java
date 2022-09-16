@@ -12,6 +12,28 @@ public class Persona {
 	public String toString() {
 		return Nombre + "-" + Apellido + "-" + DNI;
 	}
+	
+
+	public Persona(String line) {
+		
+		String s1, s2, s3;
+		
+		s1 = line.substring(0, line.indexOf("-"));
+	    line = line.substring(line.indexOf("-") + 1);
+	    s2 = line.substring(0, line.indexOf("-"));
+	    line = line.substring(line.indexOf("-") + 1, line.length());
+	    s3 = line;
+		
+		this.setNombre(s1);
+		this.setApellido(s2);
+		this.setDNI(s3);
+		
+	}
+
+
+	public Persona() {
+	}
+
 
 	public String getNombre() {
 		return Nombre;

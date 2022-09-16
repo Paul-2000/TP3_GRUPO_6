@@ -75,21 +75,10 @@ public class Archivo {
 		    Persona aux;
 			while (line != null) 
 			{
-				aux = new Persona();
-				String s1, s2, s3;
 				
 				if(line.length()>0) {
 					
-					
-				    s1 = line.substring(0, line.indexOf("-"));
-				    line = line.substring(line.indexOf("-") + 1);
-				    s2 = line.substring(0, line.indexOf("-"));
-				    line = line.substring(line.indexOf("-") + 1, line.length());
-				    s3 = line;
-					
-					aux.setNombre(s1);
-					aux.setApellido(s2);
-					aux.setDNI(s3);
+					aux = new Persona(line);
 					System.out.println(aux.toString());
 				}
 				

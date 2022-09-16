@@ -16,7 +16,6 @@ public class Principal {
 		
 		Archivo test = new Archivo("Personas.txt");
 		
-		test.read_line();
 		test.read_personas();
 		
 	}
