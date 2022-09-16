@@ -14,6 +14,10 @@ public class Principal {
 			e.printStackTrace();
 		} 
 		
+		Archivo test = new Archivo("Personas.txt");
+		
+		test.read_line();
+		test.read_personas();
 		
 	}
 	

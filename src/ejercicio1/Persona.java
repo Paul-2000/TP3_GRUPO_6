@@ -10,7 +10,7 @@ public class Persona {
 
 	@Override
 	public String toString() {
-		return "Persona [Nombre=" + Nombre + ", Apellido=" + Apellido + ", DNI=" + DNI + "]";
+		return Nombre + "-" + Apellido + "-" + DNI;
 	}
 
 	public String getNombre() {
