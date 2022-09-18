@@ -152,4 +152,24 @@ public class Archivo {
 		
 	}
 	
+	public void write_line(String line) 
+	{
+		FileWriter write;
+		
+		try 
+		{
+			write = new FileWriter(source, true);
+			BufferedWriter buffer = new BufferedWriter(write);
+			buffer.write(line);
+			buffer.close();
+			write.close();
+		} 
+		
+		catch (IOException e) 
+		{
+			System.out.println("No se encontro el archivo");
+		}
+		
+	}
+	
 }

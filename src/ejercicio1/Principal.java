@@ -34,11 +34,19 @@ public class Principal {
 		
 		Iterator<Persona> it = treePersona.iterator();
 		
+		//Ejercicio 3
+		//Set file to use
+		Archivo resultado = new Archivo ("Resultado.txt");
+		
 		while (it.hasNext()) 
 		{
 			Persona persona = (Persona) it.next();
+			//Write the file with Persona line
+			resultado.write_line(persona.toString()+"\n");
 			System.out.println(persona.toString());
 		}
+		
+		
 		
 	}
 	
