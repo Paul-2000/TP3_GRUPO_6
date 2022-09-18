@@ -1,6 +1,6 @@
 package ejercicio1;
 
-public class Persona {
+public class Persona implements Comparable<Persona>{ 
 		
 	private String Nombre;
 	
@@ -13,7 +13,7 @@ public class Persona {
 		return Nombre + "-" + Apellido + "-" + DNI;
 	}
 	
-
+	//Constructor that gets a string like "xxxNombrexxx-xxxApellidoxxx-xxxDNIxxx" and translates it to Persona
 	public Persona(String line) {
 		
 		String s1, s2, s3;
@@ -30,11 +30,12 @@ public class Persona {
 		
 	}
 
-
+	
 	public Persona() {
+		
 	}
 
-
+	
 	public String getNombre() {
 		return Nombre;
 	}
@@ -58,4 +59,11 @@ public class Persona {
 	public void setDNI(String dNI) {
 		DNI = dNI;
 	}
+
+	//Compare to for treeSet alphabetical ordering by Apellido
+	@Override
+	public int compareTo(Persona o) {
+		return this.getApellido().compareTo(o.getApellido());
+	}
+
 }
